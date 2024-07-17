@@ -1,6 +1,6 @@
 <?php
-include_once 'database.php';
-include_once 'person.php';
+include_once './model/database.php';
+include_once './model/person.php';
 
 $database = new Database();
 $conn = $database->getConnection();

@@ -2,6 +2,7 @@
 include_once './model/database.php';
 include_once './model/person.php';
 
+
 $database = new Database();
 $conn = $database->getConnection();
 
@@ -76,43 +77,29 @@ $conn->close();
 <div class="container">
     <h2>Update Person</h2>
     <form action="update.php" method="post">
-        <div class="form-group">
         <input type="hidden" name="id" value="<?php echo $person['id']; ?>">
-        </div>
         <div class="form-group">
         <label for="name">Name:</label>
-        </div>
-        <div class="form-group">
         <input type="text" id="name" name="name" value="<?php echo $person['name']; ?>" required><br>
         </div>
         <div class="form-group">
         <label for="age">Age:</label>
-        </div>
-        <div class="form-group">
         <input type="number" id="age" name="age" value="<?php echo $person['age']; ?>" required><br>
         </div>
         <div class="form-group">
         <label for="street">Street:</label>
-        </div>
-        <div class="form-group">
         <input type="text" id="street" name="street" value="<?php echo $person['street']; ?>" required><br>
         </div>
         <div class="form-group">    
-        <label for="city">City:</label>
-        </div>
-        <div class="form-group">        
+        <label for="city">City:</label>   
         <input type="text" id="city" name="city" value="<?php echo $person['city']; ?>" required><br>
         </div>
         <div class="form-group">        
-        <label for="state">State:</label>
-        </div>
-        <div class="form-group">        
+        <label for="state">State:</label>     
         <input type="text" id="state" name="state" value="<?php echo $person['state']; ?>" required><br>
         </div>
         <div class="form-group">       
-        <label for="postalCode">Postal Code:</label>
-        </div>
-        <div class="form-group">       
+        <label for="postalCode">Postal Code:</label>     
         <input type="text" id="postalCode" name="postalCode" value="<?php echo $person['postal_code']; ?>" required><br>
         </div>
         <div class="form-group">       
@@ -122,3 +109,4 @@ $conn->close();
 </body>
 </div>
 </html>
+

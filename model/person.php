@@ -1,5 +1,5 @@
 <?php
-include_once 'address.php';
+include_once './model/address.php';
 
 class Person {
     private $id;
